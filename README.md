@@ -10,7 +10,11 @@ Applications of Data Science (COMP8240)
 **Shubham Rana  (45812713)** <br>
 **Kripali Gandhi(45712158)** <br>
 
-## Project Title: Fasttext Implementation ##
+<center> <h1>fastText Implementation </h1> </center>
+
+<p align="center">
+  <img width="260" height="150" src="https://fasttext.cc/img/ogimage.png">
+</p>
 
 This repository belongs to *Group S* for the Application of Data Science (COMP8240) Major Project. We are going to implement the fasttext, which is an open-source, lightweight, free library that allows users to learn text classifiers and text representations. It works on standard, generic hardware. Model size  can later be reduced to fit on mobile devices.
 
@@ -24,7 +28,7 @@ We are working on the below datasets:
 
 **3) Good Read Reviews Spoiler:** We extracted this concentrated English review subset dataset for spoiler detection, where each book/user has at least one associated spoiler review. This dataset contains more than 1.3 Million book reviews presented in JSON format.[Good Read Reviews Spoiler Data](https://sites.google.com/eng.ucsd.edu/ucsdbookgraph/reviews)
 
-**4) Stack Exchange posts :** This is multi label dataset of the stack exchange posts, **retrieved by querying the google cloud platform.** It has 0.5 Million rows with text and tags, and it requires pre-processing as well because this is in semi-structured (JSON) format. We are fetching data directly from the google cloud platform by hitting database throught the colab. [Stack Exchange Posts Data](https://bigquery.cloud.google.com/dataset/bigquery-public-data:stackoverflow)
+**4) Stack Exchange posts :** This is multi label dataset of the stack exchange posts, **retrieved by querying the google cloud platform.** It has 0.5 Million rows with text and tags, and it requires pre-processing as well because this is in semi-structured (JSON) format. We are fetching data directly from the google cloud platform by hitting database throught the colab. [Google Cloud Platform (Big Query)](https://bigquery.cloud.google.com/dataset/bigquery-public-data:stackoverflow)
 
 ## Challenges:
 
