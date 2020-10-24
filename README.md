@@ -22,7 +22,11 @@ This repository belongs to *Group S* for the Application of Data Science (COMP82
 
 We are working on the below datasets: 
 
-**1) Amazon product data:** We extracted amazon product data(i.e., health care, etc.) which contains 0.34 Million user reviews. This dataset includes reviews (ratings, text, helpfulness votes), product metadata (descriptions, category information, price, brand, and image features), and links (also viewed/also bought graphs) and presented in JSON format. [Amazon Product Data Source](https://jmcauley.ucsd.edu/data/amazon/)
+**1) Astronomy Stack Exchange Data:** 
+􏰀 Astronomy Stack Exchange is a question and answer site for astronomers and astrophysicists.
+􏰀 Dataset Source : Astronomy
+􏰀 We have scraped data using BeautifulSoup python library.
+􏰀 We will explore hierarchical softmax and bigrams for this dataset. (it has 9687 rows with 518 labels). [Astronomy Stack Exchange Data Source](https://astronomy.stackexchange.com/questions?tab=newest&pagesize=50)
 
 **2) Social recommendation data (LibraryThing reviews):** This dataset includes ratings as well as social (or trust) relationships between users. Data are from LibraryThing (a book review website). Moreover, this is a multi label classification data and is currently been presented in JSON format with 1.7 Million reviews.[Social Recommendation Data](https://cseweb.ucsd.edu/~jmcauley/datasets.html#google_local)
 
