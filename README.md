@@ -16,26 +16,16 @@ Applications of Data Science (COMP8240)
   <img width="260" height="150" src="https://fasttext.cc/img/ogimage.png">
 </p>
 
-This repository belongs to *Group S* for the Application of Data Science (COMP8240) Major Project. We are going to implement the fasttext, which is an open-source, lightweight, free library that allows users to learn text classifiers and text representations. It works on standard, generic hardware. Model size  can later be reduced to fit on mobile devices.
+This repository contains the work of *Group S* for the Application of Data Science (COMP8240) Major Project. We have implemented fastText on four different datasets, which is an open-source, lightweight, free library that allows users to learn text classifiers and text representations. It works on standard, generic hardware. Model size  can later be reduced to fit on mobile devices.
 
 * Environment: We are running fastText using a VM (ubuntu 18.04 LTS) with t2.micro instance along with a 30 Giga bytes of RAM.
 
 We are working on the below datasets: 
 
-**1) Astronomy Stack Exchange Data:** 
-􏰀 Astronomy Stack Exchange is a question and answer site for astronomers and astrophysicists.
-􏰀 Dataset Source : Astronomy
-􏰀 We have scraped data using BeautifulSoup python library.
-􏰀 We will explore hierarchical softmax and bigrams for this dataset. (it has 9687 rows with 518 labels). [Astronomy Stack Exchange Data Source](https://astronomy.stackexchange.com/questions?tab=newest&pagesize=50)
+**1) Astronomy Stack Exchange Data:** Astronomy Stack Exchange is a question and answer site for astronomers and astrophysicists. The dataset has been obtained from [Astronomy Stack Exchange](https://astronomy.stackexchange.com/questions?tab=newest&pagesize=50). We have used Python's Library called BeautifulSoup to scrape Questions and their respective Tags from the webpages. This dataset contains 9687 rows and 518 labels and is a multi label dataset. We have also explored hierarchical softmax and bigrams for the dataset.
 
-**2) Social recommendation data (LibraryThing reviews):** This dataset includes ratings as well as social (or trust) relationships between users. Data are from LibraryThing (a book review website). Moreover, this is a multi label classification data and is currently been presented in JSON format with 1.7 Million reviews.[Social Recommendation Data](https://cseweb.ucsd.edu/~jmcauley/datasets.html#google_local)
+**2) Ask Ubuntu Stack Exchange Data:** Ask Ubuntu: It is a community-driven question and answer website for the Ubuntu operating system. The dataset source has been derived from [Ask Ubuntu Stack Exchange](https://askubuntu.com/). We have scraped Questions and Tags for this dataset using the python library called BeautifulSoup. It is a multi label dataset with 3,61,702 rows and 3379 labels, however, due to constraints have only scraped dataset from limited webpages not all. We have also explored various techniques of text classification using fastText, such as Bi-grams, Hierarchical softmax etc.
 
-**3) Good Read Reviews Spoiler:** We extracted this concentrated English review subset dataset for spoiler detection, where each book/user has at least one associated spoiler review. This dataset contains more than 1.3 Million book reviews presented in JSON format.[Good Read Reviews Spoiler Data](https://sites.google.com/eng.ucsd.edu/ucsdbookgraph/reviews)
+**3) Photography Stack Exchange Data:** Photography Stack Exchange is a question and site for professional, enthusiast and amateur photographers. The source of this dataset can be found here [Photography Stack Exchange](https://photo.stackexchange.com/). We are using BeautifulSoup which is a very popular Python Library to scrape Questions and Tags respectively for this data. This dataset has 20297 rows and 451 labels and is a multi label dataset. After separating labels, we converted those labels in a format which is required to implement fastText.
 
-**4) Stack Exchange posts :** This is multi label dataset of the stack exchange posts, **retrieved by querying the google cloud platform.** It has 0.5 Million rows with text and tags, and it requires pre-processing as well because this is in semi-structured (JSON) format. We are fetching data directly from the google cloud platform by hitting database throught the colab. [Google Cloud Platform (Big Query)](https://bigquery.cloud.google.com/dataset/bigquery-public-data:stackoverflow)
-
-## Challenges:
-
-1. Google colab not supports to read 1.3 Million data from the source, so we used the shell commands to reduce the file size to 0.5 Million rows and process them.
-
-2. Social Recommendtion data has wrong JSON format(badJson ~ it has data enclosed in single quotes whereas python parses only JSON data enclosed in double quotes), so we pre-process this file before reading in the Colab.
+**4) Stack Overflow Posts :** This is multi label dataset of the Stack Overflow Posts, **retrieved by querying the google cloud platform.** It has 0.5 Million rows with Questions and Tags (along with other columns such as Body, UserID, Answer Count, Created at. We are fetching data directly from the google cloud platform by hitting database throught the colab. [Google Cloud Platform (Big Query)](https://bigquery.cloud.google.com/dataset/bigquery-public-data:stackoverflow)
