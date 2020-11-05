@@ -18,7 +18,9 @@ Applications of Data Science (COMP8240)
 
 This repository contains the work of *Group S* for the Application of Data Science (COMP8240) Major Project. We have implemented fastText on four different datasets, which is an open-source, lightweight, free library that allows users to learn text classifiers and text representations. It works on standard, generic hardware. Model size  can later be reduced to fit on mobile devices.
 
-* Environment: We are running fastText using a VM (ubuntu 18.04 LTS) with t2.micro instance along with a 30 Giga bytes of RAM.
+* Environment : AWS Virtual Machine and server - Ubuntu 18.04 LTS , Google Colaboratory
+* Code Management (Version Control, Code History): GitHub
+* For Reporting:  Latex + Overleaf
 
 We are working on the below datasets: 
 
@@ -28,4 +30,7 @@ We are working on the below datasets:
 
 **3) Photography Stack Exchange Data:** Photography Stack Exchange is a question and site for professional, enthusiast and amateur photographers. The source of this dataset can be found here [Photography Stack Exchange](https://photo.stackexchange.com/). We are using BeautifulSoup which is a very popular Python Library to scrape Questions and Tags respectively for this data. This dataset has 20297 rows and 451 labels and is a multi label dataset. After separating labels, we converted those labels in a format which is required to implement fastText.
 
-**4) Stack Overflow Posts :** This is multi label dataset of the Stack Overflow Posts, **retrieved by querying the google cloud platform.** It has 0.5 Million rows with Questions and Tags (along with other columns such as Body, UserID, Answer Count, Created at. We are fetching data directly from the google cloud platform by hitting database throught the colab. [Google Cloud Platform (Big Query)](https://bigquery.cloud.google.com/dataset/bigquery-public-data:stackoverflow)
+**4) Stack Overflow Posts :** This is multi label dataset of the Stack Overflow Posts, **retrieved by querying the google cloud platform.** It has 0.5 Million rows with Questions and Tags (along with other columns such as body, user_id, answer_count, created_at, many more. We are fetching data directly from Big Query (Google Cloud Console) by hitting database throught the Google Colab.After separating labels, we converted those labels in a format which is required to implement fastText. [StackOverflow Posts ~ Big Query](https://console.cloud.google.com/marketplace/product/stack-exchange/stack-overflow).
+
+**Results** : We had trained our four new datasets on different models with different hyper parameters. Thus, after applying some optimal hyperparameters(epochs, learning_rate, 
+hierarchical softmax loss, wordNgrams and other scalling parameters) in every successive model of our datasets we noticed that both Precision and Recall increased simultaneously.
